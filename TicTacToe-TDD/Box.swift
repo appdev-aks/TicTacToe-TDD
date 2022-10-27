@@ -14,3 +14,6 @@ enum Players: String, CaseIterable {
     case player2 = "Player2"
 }
 
+enum GameStates {
+    case newGame
+}

@@ -10,9 +10,18 @@ import XCTest
 
 final class TDDExampleTests: XCTestCase {
 
+    var viewModel: ViewModelGameplay!
+
+    override func setUpWithError() throws {
+        viewModel = ViewModelGameplay()
+    }
+
+    override func tearDownWithError() throws {
+        viewModel = nil
+    }
+    
     func test_StartGame_NineBoxesAvailable(){
-        let view = ContentView()
-        XCTAssertEqual(view.boxes.count, 9)
+        XCTAssertEqual(viewModel.boxes.count, 9)
     }
     
     func test_GameShouldHaveTwoPlayers() {
@@ -21,7 +30,13 @@ final class TDDExampleTests: XCTestCase {
     }
     
     func test_GameShouldHaveNineBoxes(){
-        let view = ContentView()
-        XCTAssertEqual(view.boxes.count, 9)
+        XCTAssertEqual(viewModel.boxes.count, 9)
     }
+    
+    func test_NewGame_AllNineBoxesShouldBeEmpty(){
+        XCTAssertEqual(viewModel.gameState, .newGame)
+        let emptyBoxes = viewModel.boxes.filter { $0 == nil  }
+        XCTAssertEqual(emptyBoxes.count, 9)
+    }
+    
 }
