@@ -61,4 +61,12 @@ final class TDDExampleTests: XCTestCase {
         XCTAssertNotEqual(viewModel.winningPlayer, Players.player1.rawValue)
         XCTAssertNotEqual(viewModel.winningPlayer, Players.player2.rawValue)
     }
+    
+    func test_Player1ShouldPlayWith_SymbolX_Player2WithSymbolO(){
+        viewModel.currentPlayer = .player1
+        var box = Box(player: .player1)
+        XCTAssertEqual(box.playerSymbol, "X")
+        box = Box(player: .player2)
+        XCTAssertEqual(box.playerSymbol, "O")
+    }
 }

@@ -7,4 +7,14 @@
 
 import Foundation
 
-struct Box {}
+struct Box {
+    var player: Players
+    var playerSymbol: String {
+        switch player {
+            case .player1:
+                return "X"
+            case .player2:
+                return "O"
+        }
+    }
+}
