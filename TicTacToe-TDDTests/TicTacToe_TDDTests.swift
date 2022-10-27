@@ -39,4 +39,26 @@ final class TDDExampleTests: XCTestCase {
         XCTAssertEqual(emptyBoxes.count, 9)
     }
     
+    func test_whenGameStateIsPlayable_WinnerShouldBeUndecided(){
+        viewModel.setGameBoardStateFor(state: .playing)
+        XCTAssertEqual(viewModel.winningPlayer, "?")
+        XCTAssertNotEqual(viewModel.winningPlayer, "None!")
+        XCTAssertNotEqual(viewModel.winningPlayer, Players.player1.rawValue)
+        XCTAssertNotEqual(viewModel.winningPlayer, Players.player2.rawValue)
+    }
+    
+    func test_whenGameStateIsWon_WinnerShouldBePlayerOneOrPlayerTwo(){
+        viewModel.setGameBoardStateFor(state: .won)
+        XCTAssertTrue(Players.allCases.contains { $0.rawValue == viewModel.winningPlayer })
+        XCTAssertNotEqual(viewModel.winningPlayer, "?")
+        XCTAssertNotEqual(viewModel.winningPlayer, "None!")
+    }
+    
+    func test_whenGameStateIsDraw_WinnerShouldBeNone(){
+        viewModel.setGameBoardStateFor(state: .draw)
+        XCTAssertEqual(viewModel.winningPlayer, "None!")
+        XCTAssertNotEqual(viewModel.winningPlayer, "?")
+        XCTAssertNotEqual(viewModel.winningPlayer, Players.player1.rawValue)
+        XCTAssertNotEqual(viewModel.winningPlayer, Players.player2.rawValue)
+    }
 }

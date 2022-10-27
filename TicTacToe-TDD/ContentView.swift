@@ -24,6 +24,10 @@ struct ContentView: View {
                         }
                     }
                 }
+                
+                Spacer()
+                Text("Winner is: \(viewModel.winningPlayer)")
+                    .font(.system(size: 25))
                 Spacer()
             }
         }
