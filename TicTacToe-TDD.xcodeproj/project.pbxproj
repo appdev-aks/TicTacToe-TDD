@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48AD1854290AEDC60054B206 /* TicTacToe_TDDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AD1853290AEDC60054B206 /* TicTacToe_TDDApp.swift */; };
+		48AD1856290AEDC60054B206 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AD1855290AEDC60054B206 /* ContentView.swift */; };
+		48AD1858290AEDC80054B206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48AD1857290AEDC80054B206 /* Assets.xcassets */; };
+		48AD185B290AEDC80054B206 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48AD185A290AEDC80054B206 /* Preview Assets.xcassets */; };
+		48AD1865290AEDC90054B206 /* TicTacToe_TDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AD1864290AEDC90054B206 /* TicTacToe_TDDTests.swift */; };
+		48AD186F290AEDC90054B206 /* TicTacToe_TDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AD186E290AEDC90054B206 /* TicTacToe_TDDUITests.swift */; };
+		48AD1871290AEDC90054B206 /* TicTacToe_TDDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AD1870290AEDC90054B206 /* TicTacToe_TDDUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48AD1861290AEDC90054B206 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48AD1848290AEDC60054B206 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48AD184F290AEDC60054B206;
+			remoteInfo = "TicTacToe-TDD";
+		};
+		48AD186B290AEDC90054B206 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48AD1848290AEDC60054B206 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48AD184F290AEDC60054B206;
+			remoteInfo = "TicTacToe-TDD";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		48AD1850290AEDC60054B206 /* TicTacToe-TDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TicTacToe-TDD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48AD1853290AEDC60054B206 /* TicTacToe_TDDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe_TDDApp.swift; sourceTree = "<group>"; };
+		48AD1855290AEDC60054B206 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		48AD1857290AEDC80054B206 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48AD185A290AEDC80054B206 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		48AD1860290AEDC90054B206 /* TicTacToe-TDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TicTacToe-TDDTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48AD1864290AEDC90054B206 /* TicTacToe_TDDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe_TDDTests.swift; sourceTree = "<group>"; };
+		48AD186A290AEDC90054B206 /* TicTacToe-TDDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TicTacToe-TDDUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48AD186E290AEDC90054B206 /* TicTacToe_TDDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe_TDDUITests.swift; sourceTree = "<group>"; };
+		48AD1870290AEDC90054B206 /* TicTacToe_TDDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe_TDDUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48AD184D290AEDC60054B206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48AD185D290AEDC90054B206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48AD1867290AEDC90054B206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48AD1847290AEDC60054B206 = {
+			isa = PBXGroup;
+			children = (
+				48AD1852290AEDC60054B206 /* TicTacToe-TDD */,
+				48AD1863290AEDC90054B206 /* TicTacToe-TDDTests */,
+				48AD186D290AEDC90054B206 /* TicTacToe-TDDUITests */,
+				48AD1851290AEDC60054B206 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		48AD1851290AEDC60054B206 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48AD1850290AEDC60054B206 /* TicTacToe-TDD.app */,
+				48AD1860290AEDC90054B206 /* TicTacToe-TDDTests.xctest */,
+				48AD186A290AEDC90054B206 /* TicTacToe-TDDUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48AD1852290AEDC60054B206 /* TicTacToe-TDD */ = {
+			isa = PBXGroup;
+			children = (
+				48AD1853290AEDC60054B206 /* TicTacToe_TDDApp.swift */,
+				48AD1855290AEDC60054B206 /* ContentView.swift */,
+				48AD1857290AEDC80054B206 /* Assets.xcassets */,
+				48AD1859290AEDC80054B206 /* Preview Content */,
+			);
+			path = "TicTacToe-TDD";
+			sourceTree = "<group>";
+		};
+		48AD1859290AEDC80054B206 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				48AD185A290AEDC80054B206 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		48AD1863290AEDC90054B206 /* TicTacToe-TDDTests */ = {
+			isa = PBXGroup;
+			children = (
+				48AD1864290AEDC90054B206 /* TicTacToe_TDDTests.swift */,
+			);
+			path = "TicTacToe-TDDTests";
+			sourceTree = "<group>";
+		};
+		48AD186D290AEDC90054B206 /* TicTacToe-TDDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				48AD186E290AEDC90054B206 /* TicTacToe_TDDUITests.swift */,
+				48AD1870290AEDC90054B206 /* TicTacToe_TDDUITestsLaunchTests.swift */,
+			);
+			path = "TicTacToe-TDDUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48AD184F290AEDC60054B206 /* TicTacToe-TDD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48AD1874290AEDC90054B206 /* Build configuration list for PBXNativeTarget "TicTacToe-TDD" */;
+			buildPhases = (
+				48AD184C290AEDC60054B206 /* Sources */,
+				48AD184D290AEDC60054B206 /* Frameworks */,
+				48AD184E290AEDC60054B206 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TicTacToe-TDD";
+			productName = "TicTacToe-TDD";
+			productReference = 48AD1850290AEDC60054B206 /* TicTacToe-TDD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		48AD185F290AEDC90054B206 /* TicTacToe-TDDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48AD1877290AEDC90054B206 /* Build configuration list for PBXNativeTarget "TicTacToe-TDDTests" */;
+			buildPhases = (
+				48AD185C290AEDC90054B206 /* Sources */,
+				48AD185D290AEDC90054B206 /* Frameworks */,
+				48AD185E290AEDC90054B206 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48AD1862290AEDC90054B206 /* PBXTargetDependency */,
+			);
+			name = "TicTacToe-TDDTests";
+			productName = "TicTacToe-TDDTests";
+			productReference = 48AD1860290AEDC90054B206 /* TicTacToe-TDDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		48AD1869290AEDC90054B206 /* TicTacToe-TDDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48AD187A290AEDC90054B206 /* Build configuration list for PBXNativeTarget "TicTacToe-TDDUITests" */;
+			buildPhases = (
+				48AD1866290AEDC90054B206 /* Sources */,
+				48AD1867290AEDC90054B206 /* Frameworks */,
+				48AD1868290AEDC90054B206 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48AD186C290AEDC90054B206 /* PBXTargetDependency */,
+			);
+			name = "TicTacToe-TDDUITests";
+			productName = "TicTacToe-TDDUITests";
+			productReference = 48AD186A290AEDC90054B206 /* TicTacToe-TDDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48AD1848290AEDC60054B206 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					48AD184F290AEDC60054B206 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					48AD185F290AEDC90054B206 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 48AD184F290AEDC60054B206;
+					};
+					48AD1869290AEDC90054B206 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 48AD184F290AEDC60054B206;
+					};
+				};
+			};
+			buildConfigurationList = 48AD184B290AEDC60054B206 /* Build configuration list for PBXProject "TicTacToe-TDD" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48AD1847290AEDC60054B206;
+			productRefGroup = 48AD1851290AEDC60054B206 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48AD184F290AEDC60054B206 /* TicTacToe-TDD */,
+				48AD185F290AEDC90054B206 /* TicTacToe-TDDTests */,
+				48AD1869290AEDC90054B206 /* TicTacToe-TDDUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48AD184E290AEDC60054B206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48AD185B290AEDC80054B206 /* Preview Assets.xcassets in Resources */,
+				48AD1858290AEDC80054B206 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48AD185E290AEDC90054B206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48AD1868290AEDC90054B206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48AD184C290AEDC60054B206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48AD1856290AEDC60054B206 /* ContentView.swift in Sources */,
+				48AD1854290AEDC60054B206 /* TicTacToe_TDDApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48AD185C290AEDC90054B206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48AD1865290AEDC90054B206 /* TicTacToe_TDDTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48AD1866290AEDC90054B206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48AD1871290AEDC90054B206 /* TicTacToe_TDDUITestsLaunchTests.swift in Sources */,
+				48AD186F290AEDC90054B206 /* TicTacToe_TDDUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48AD1862290AEDC90054B206 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48AD184F290AEDC60054B206 /* TicTacToe-TDD */;
+			targetProxy = 48AD1861290AEDC90054B206 /* PBXContainerItemProxy */;
+		};
+		48AD186C290AEDC90054B206 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48AD184F290AEDC60054B206 /* TicTacToe-TDD */;
+			targetProxy = 48AD186B290AEDC90054B206 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		48AD1872290AEDC90054B206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		48AD1873290AEDC90054B206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48AD1875290AEDC90054B206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TicTacToe-TDD/Preview Content\"";
+				DEVELOPMENT_TEAM = 42W94L6N3V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kata.TicTacToe-TDD";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48AD1876290AEDC90054B206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TicTacToe-TDD/Preview Content\"";
+				DEVELOPMENT_TEAM = 42W94L6N3V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kata.TicTacToe-TDD";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		48AD1878290AEDC90054B206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42W94L6N3V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kata.TicTacToe-TDDTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TicTacToe-TDD.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TicTacToe-TDD";
+			};
+			name = Debug;
+		};
+		48AD1879290AEDC90054B206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42W94L6N3V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kata.TicTacToe-TDDTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TicTacToe-TDD.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TicTacToe-TDD";
+			};
+			name = Release;
+		};
+		48AD187B290AEDC90054B206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42W94L6N3V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kata.TicTacToe-TDDUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TicTacToe-TDD";
+			};
+			name = Debug;
+		};
+		48AD187C290AEDC90054B206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42W94L6N3V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kata.TicTacToe-TDDUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TicTacToe-TDD";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48AD184B290AEDC60054B206 /* Build configuration list for PBXProject "TicTacToe-TDD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48AD1872290AEDC90054B206 /* Debug */,
+				48AD1873290AEDC90054B206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48AD1874290AEDC90054B206 /* Build configuration list for PBXNativeTarget "TicTacToe-TDD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48AD1875290AEDC90054B206 /* Debug */,
+				48AD1876290AEDC90054B206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48AD1877290AEDC90054B206 /* Build configuration list for PBXNativeTarget "TicTacToe-TDDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48AD1878290AEDC90054B206 /* Debug */,
+				48AD1879290AEDC90054B206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48AD187A290AEDC90054B206 /* Build configuration list for PBXNativeTarget "TicTacToe-TDDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48AD187B290AEDC90054B206 /* Debug */,
+				48AD187C290AEDC90054B206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48AD1848290AEDC60054B206 /* Project object */;
+}
