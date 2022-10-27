@@ -9,19 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let boxes = [Box(),Box(),Box(),Box(),Box(),Box(),Box(),Box(),Box()]
-    
-    let gameColumns = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
+    @StateObject private var viewModel = ViewModelGameplay()
     
     var body: some View {
         GeometryReader { proxy in
             VStack {
                 Spacer()
-                    LazyVGrid(columns: gameColumns) {
+                LazyVGrid(columns: viewModel.gameColumns) {
                         ForEach(0..<9) { index in
                             ZStack {
                                 RoundedRectangle(cornerRadius: 5,style: .circular)
