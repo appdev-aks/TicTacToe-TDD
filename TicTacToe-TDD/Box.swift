@@ -9,6 +9,7 @@ import Foundation
 
 struct Box {
     var player: Players
+    var boxIndex: Int
     var playerSymbol: String {
         switch player {
             case .player1:

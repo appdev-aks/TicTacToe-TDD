@@ -64,9 +64,33 @@ final class TDDExampleTests: XCTestCase {
     
     func test_Player1ShouldPlayWith_SymbolX_Player2WithSymbolO(){
         viewModel.currentPlayer = .player1
-        var box = Box(player: .player1)
+        var box = Box(player: .player1, boxIndex: 0)
         XCTAssertEqual(box.playerSymbol, "X")
-        box = Box(player: .player2)
+        box = Box(player: .player2, boxIndex: 1)
         XCTAssertEqual(box.playerSymbol, "O")
+    }
+    
+    func test_NineWinningCombinations(){
+        for winningCombination in viewModel.winningCombinations {
+            let positionArray = Array(winningCombination)
+            viewModel.boxes[0] = (Box(player: .player1, boxIndex: positionArray[0]))
+            viewModel.boxes[1] = (Box(player: .player1, boxIndex: positionArray[1]))
+            viewModel.boxes[2] = (Box(player: .player1, boxIndex: positionArray[2]))
+            XCTAssertTrue(viewModel.checkForWinningCombination())
+        }
+    }
+    
+    func test_WhenAllBoxesPlayed_WithNoWinningCombination_GameShouldDraw(){
+        viewModel.boxes[0] = (Box(player: .player1, boxIndex: 0))
+        viewModel.boxes[1] = (Box(player: .player2, boxIndex: 1))
+        viewModel.boxes[2] = (Box(player: .player1, boxIndex: 7))
+        viewModel.boxes[3] = (Box(player: .player2, boxIndex: 3))
+        viewModel.boxes[4] = (Box(player: .player1, boxIndex: 5))
+        viewModel.boxes[5] = (Box(player: .player2, boxIndex: 8))
+        viewModel.boxes[6] = (Box(player: .player1, boxIndex: 4))
+        viewModel.boxes[7] = (Box(player: .player2, boxIndex: 2))
+        viewModel.boxes[8] = (Box(player: .player1, boxIndex: 6))
+        XCTAssertFalse(viewModel.checkForWinningCombination())
+        XCTAssertTrue(viewModel.isGameDraw())
     }
 }
