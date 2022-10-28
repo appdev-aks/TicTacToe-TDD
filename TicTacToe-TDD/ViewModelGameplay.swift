@@ -13,6 +13,7 @@ class ViewModelGameplay: ObservableObject  {
     @Published var gameState: GameStates = .playing
     @Published var winningPlayer = "?"
     @Published var currentPlayer = Players.player1
+    @Published var resetButtonEnabled = true
     /* Gameboard
      0 1 2
      3 4 5
@@ -57,21 +58,29 @@ class ViewModelGameplay: ObservableObject  {
         return true
     }
     
+    func resetGame(){
+        setGameBoardStateFor(state: .newGame)
+    }
+    
     func setGameBoardStateFor(state: GameStates){
         switch state {
         case .playing:
             winningPlayer = "?"
+            resetButtonEnabled = true
         case .won:
             winningPlayer = currentPlayer.rawValue
             gameState = .won
+            resetButtonEnabled = false
         case .draw:
             gameState = .draw
             winningPlayer = "None!"
+            resetButtonEnabled = false
         case .newGame:
             gameState = .playing
             winningPlayer = "?"
             currentPlayer = Players.player1
             boxes = Array(repeating: nil, count: 9)
+            resetButtonEnabled = true
         }
     }
 }

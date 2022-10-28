@@ -42,7 +42,20 @@ struct ContentView: View {
                 Text("Winner is: \(viewModel.winningPlayer)")
                     .font(.system(size: 25))
                 Spacer()
-            }
+                Button {
+                    viewModel.resetGame()
+                } label: {
+                    Text("RESTART")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(15)
+                }.border(viewModel.resetButtonEnabled ? .gray :.cyan,width: 2)
+                    .background(viewModel.resetButtonEnabled ? .gray :.black)
+                    .cornerRadius(5)
+                    .disabled(viewModel.resetButtonEnabled)
+
+            }.padding()
         }
     }
 }

@@ -137,4 +137,27 @@ final class TDDExampleTests: XCTestCase {
         viewModel.boxes[8] = (Box(player: .player1, boxIndex: 9))
         XCTAssertFalse(viewModel.isNextMovePossible())
     }
+    
+    func test_gameRestarts_PlayerOneCanMakeMove(){
+        XCTAssertTrue(viewModel.isNextMovePossible())
+        setWinningCombination()
+        XCTAssertFalse(viewModel.isNextMovePossible())
+        viewModel.resetGame()
+        XCTAssertTrue(viewModel.isNextMovePossible())
+        setGameDrawCombination()
+        XCTAssertFalse(viewModel.isNextMovePossible())
+        viewModel.resetGame()
+        XCTAssertTrue(viewModel.isNextMovePossible())
+    }
+    
+    func test_newGameShouldHaveAllNineBoxesAvailable(){
+        var emptyBoxes = viewModel.boxes.filter { $0 == nil  }
+        XCTAssertEqual(emptyBoxes.count, 9)
+        setWinningCombination()
+        emptyBoxes = viewModel.boxes.filter { $0 == nil  }
+        XCTAssertNotEqual(emptyBoxes.count, 9)
+        viewModel.resetGame()
+        emptyBoxes = viewModel.boxes.filter { $0 == nil  }
+        XCTAssertEqual(emptyBoxes.count, 9)
+    }
 }
