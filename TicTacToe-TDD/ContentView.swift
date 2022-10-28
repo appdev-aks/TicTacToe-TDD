@@ -15,12 +15,25 @@ struct ContentView: View {
         GeometryReader { proxy in
             VStack {
                 Spacer()
-                LazyVGrid(columns: viewModel.gameColumns) {
+                Text("Player move: \(viewModel.currentPlayer.rawValue)")
+                    .font(.largeTitle)
+                Spacer()
+                LazyVGrid(columns: viewModel.gameColumns, spacing: 15) {
                         ForEach(0..<9) { index in
                             ZStack {
                                 RoundedRectangle(cornerRadius: 5,style: .circular)
                                     .foregroundColor(.cyan)
-                                .frame(width: proxy.size.width * 0.30,height: proxy.size.width * 0.30,alignment: .bottom)
+                                .frame(width: proxy.size.width * 0.28,height: proxy.size.width * 0.28,alignment: .bottom)
+                                Text(viewModel.boxes[index]?.playerSymbol ?? "")
+                                    .font(.system(size: 60))
+                                    .foregroundColor(.white)
+                        }.onTapGesture {
+                            if viewModel.isBoxIsAvailableForMove(position: index) && viewModel.gameState == .playing {
+                                    viewModel.boxes[index] = Box(player: viewModel.currentPlayer, boxIndex: index)
+                                    if viewModel.isNextMovePossible() {
+                                        viewModel.currentPlayer =  (viewModel.currentPlayer == .player1) ? .player2 : .player1
+                                }
+                            }
                         }
                     }
                 }
