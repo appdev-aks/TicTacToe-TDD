@@ -10,7 +10,7 @@ import SwiftUI
 
 class ViewModelGameplay: ObservableObject  {
     @Published var boxes: [Box?] = Array(repeating: nil, count: 9)
-    @Published var gameState: GameStates = .newGame
+    @Published var gameState: GameStates = .playing
     @Published var winningPlayer = "?"
     @Published var currentPlayer = Players.player1
     /* Gameboard
@@ -31,6 +31,7 @@ class ViewModelGameplay: ObservableObject  {
         let playerPositions = Set(playerMoves.map{$0.boxIndex})
 
         for pattern in winningCombinations where pattern.isSubset(of: playerPositions){
+            setGameBoardStateFor(state: .won)
             return true
         }
         return false
@@ -43,6 +44,17 @@ class ViewModelGameplay: ObservableObject  {
             setGameBoardStateFor(state: .draw)
             return true
         }
+    }
+    
+    func isBoxIsAvailableForMove(position: Int) -> Bool{
+        boxes[position] == nil ? true : false
+    }
+    
+    func isNextMovePossible() -> Bool{
+        if checkForWinningCombination() || isGameDraw() {
+            return false
+        }
+        return true
     }
     
     func setGameBoardStateFor(state: GameStates){
@@ -58,6 +70,7 @@ class ViewModelGameplay: ObservableObject  {
         case .newGame:
             gameState = .playing
             winningPlayer = "?"
+            currentPlayer = Players.player1
             boxes = Array(repeating: nil, count: 9)
         }
     }

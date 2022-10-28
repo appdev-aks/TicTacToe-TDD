@@ -34,7 +34,7 @@ final class TDDExampleTests: XCTestCase {
     }
     
     func test_NewGame_AllNineBoxesShouldBeEmpty(){
-        XCTAssertEqual(viewModel.gameState, .newGame)
+        viewModel.gameState = .newGame
         let emptyBoxes = viewModel.boxes.filter { $0 == nil  }
         XCTAssertEqual(emptyBoxes.count, 9)
     }
@@ -81,6 +81,12 @@ final class TDDExampleTests: XCTestCase {
     }
     
     func test_WhenAllBoxesPlayed_WithNoWinningCombination_GameShouldDraw(){
+       setGameDrawCombination()
+        XCTAssertFalse(viewModel.checkForWinningCombination())
+        XCTAssertTrue(viewModel.isGameDraw())
+    }
+    
+    fileprivate func setGameDrawCombination() {
         viewModel.boxes[0] = (Box(player: .player1, boxIndex: 0))
         viewModel.boxes[1] = (Box(player: .player2, boxIndex: 1))
         viewModel.boxes[2] = (Box(player: .player1, boxIndex: 7))
@@ -90,7 +96,45 @@ final class TDDExampleTests: XCTestCase {
         viewModel.boxes[6] = (Box(player: .player1, boxIndex: 4))
         viewModel.boxes[7] = (Box(player: .player2, boxIndex: 2))
         viewModel.boxes[8] = (Box(player: .player1, boxIndex: 6))
-        XCTAssertFalse(viewModel.checkForWinningCombination())
-        XCTAssertTrue(viewModel.isGameDraw())
+    }
+    
+    fileprivate func setWinningCombination(){
+        viewModel.boxes[0] = (Box(player: .player1, boxIndex: 0))
+        viewModel.boxes[1] = (Box(player: .player1, boxIndex: 1))
+        viewModel.boxes[2] = (Box(player: .player1, boxIndex: 2))
+    }
+    
+    func test_WhenBoxesAreNotAvailable_and_WinningConditionIsNotMatched_GameShouldDraw(){
+        XCTAssertTrue(viewModel.isNextMovePossible())
+        setGameDrawCombination()
+        XCTAssertFalse(viewModel.isNextMovePossible())
+    }
+    
+    func test_NextMoveShouldNotPossible_WhenMatchIsWon(){
+        XCTAssertTrue(viewModel.isNextMovePossible())
+        setWinningCombination()
+        XCTAssertFalse(viewModel.isNextMovePossible())
+    }
+    
+    func test_WhenBoxesAreAvailable_butWinningConditionMatched_GameShouldFinished(){
+        viewModel.boxes[0] = Box(player: .player1, boxIndex: 0)
+        viewModel.boxes[1] = Box(player: .player1, boxIndex: 1)
+        viewModel.boxes[2] = Box(player: .player1, boxIndex: 2)
+        viewModel.boxes[3] = nil
+        XCTAssertFalse(viewModel.isNextMovePossible())
+    }
+    
+    func test_WhenBoxesAreNotAvailable_butWinningConditionMatched_GameShouldHaveWinner(){
+        viewModel.boxes[0] = Box(player: .player1, boxIndex: 0)
+        viewModel.boxes[1] = Box(player: .player1, boxIndex: 1)
+        viewModel.boxes[2] = Box(player: .player1, boxIndex: 2)
+        
+        viewModel.boxes[3] = (Box(player: .player2, boxIndex: 4))
+        viewModel.boxes[4] = (Box(player: .player2, boxIndex: 5))
+        viewModel.boxes[5] = (Box(player: .player2, boxIndex: 6))
+        viewModel.boxes[6] = (Box(player: .player1, boxIndex: 7))
+        viewModel.boxes[7] = (Box(player: .player2, boxIndex: 8))
+        viewModel.boxes[8] = (Box(player: .player1, boxIndex: 9))
+        XCTAssertFalse(viewModel.isNextMovePossible())
     }
 }
