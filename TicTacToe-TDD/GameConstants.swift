@@ -8,8 +8,8 @@
 import Foundation
 
 enum Players: String, CaseIterable {
-    case player1 = "Player1"
-    case player2 = "Player2"
+    case player1 = "Rick"
+    case player2 = "Morty"
 }
 
 enum GameStates {

@@ -142,10 +142,12 @@ final class TDDExampleTests: XCTestCase {
         XCTAssertTrue(viewModel.isNextMovePossible())
         setWinningCombination()
         XCTAssertFalse(viewModel.isNextMovePossible())
+        XCTAssertFalse(viewModel.isGameDraw())
         viewModel.resetGame()
         XCTAssertTrue(viewModel.isNextMovePossible())
         setGameDrawCombination()
         XCTAssertFalse(viewModel.isNextMovePossible())
+        XCTAssertTrue(viewModel.isGameDraw())
         viewModel.resetGame()
         XCTAssertTrue(viewModel.isNextMovePossible())
     }
@@ -155,9 +157,11 @@ final class TDDExampleTests: XCTestCase {
         XCTAssertEqual(emptyBoxes.count, 9)
         setWinningCombination()
         emptyBoxes = viewModel.boxes.filter { $0 == nil  }
+        XCTAssertFalse(viewModel.isBoxIsAvailableForMove(position: 0))
         XCTAssertNotEqual(emptyBoxes.count, 9)
         viewModel.resetGame()
         emptyBoxes = viewModel.boxes.filter { $0 == nil  }
+        XCTAssertTrue(viewModel.isBoxIsAvailableForMove(position: 0))
         XCTAssertEqual(emptyBoxes.count, 9)
     }
 }
